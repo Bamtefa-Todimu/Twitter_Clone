@@ -1,0 +1,101 @@
+.login-container
+{
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+.login-wrapper
+{
+    position: relative;
+    display: flex;
+}
+
+.login_image-container {
+    width: 100%;
+    height: 95vh;
+    min-height: 500px;
+    max-width: 1040px;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    flex-shrink: 1;
+}
+
+.login_image-container img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.login_image-container svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 3;
+}
+
+.login_right-container
+{
+    width: 46%;
+    position: relative;
+    padding: 0 2rem;
+    min-width: calc(580px + 2rem);
+    flex-shrink: 0;
+    /* background-color: antiquewhite; */
+}
+
+.login_right-wrapper
+{  
+    
+    height: 95vh;
+    min-height: 500px;
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding:1.5rem 0;
+    flex-shrink: 0;
+
+}
+
+.twitter-logo
+{
+    margin-bottom: 3rem;
+}
+
+.happening_now_text
+{
+    font-size: 4rem;
+    color: rgb(231, 233, 234);
+    font-weight: 900;
+    margin-bottom: 2.7rem;
+}
+
+.jtt_text
+{
+    font-size: 2rem;
+        color: rgb(231, 233, 234);
+        font-weight: 900;
+        margin-bottom: 1.3rem;
+}
+
+.login-footer
+{
+    height: 50px;
+    width: 100%;
+    word-spacing: 1.5ch;
+    font-size: 0.82rem;
+    color: rgb(113, 118, 123);
+    text-align: center;
+    display: grid;
+    place-content: center;
+}
+        

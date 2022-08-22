@@ -1,13 +1,10 @@
 import {
-  AsyncThunkAction,
   Dispatch,
   Middleware,
-  ThunkDispatch,
   MiddlewareAPI,
   AnyAction,
-  //   PayloadAction,
+  
 } from '@reduxjs/toolkit'
-import { actionType } from "../auth"
 
 
 
