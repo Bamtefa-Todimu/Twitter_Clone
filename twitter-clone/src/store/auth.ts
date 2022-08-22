@@ -7,8 +7,7 @@ interface payloadType {
 }
 
 
-interface actionType {
-    type:string | null | undefined,
+export interface actionType {
     payload: payloadType
 }
 
@@ -42,3 +41,7 @@ const slice = createSlice({
     
 
 })
+
+
+export const {userLoginRequested,userLoginSuccessfull} = slice.actions
+export default slice.reducer
