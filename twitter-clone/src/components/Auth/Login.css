@@ -17,7 +17,7 @@
 .login_image-container {
     width: 100%;
     height: 95vh;
-    min-height: 500px;
+    min-height: 700px;
     max-width: 1040px;
     position: relative;
     overflow: hidden;
@@ -26,6 +26,16 @@
     flex-shrink: 1;
 }
 
+.login_twitlogo_container
+{
+    position: absolute;
+    width: 37%;
+    height: 60%;
+    top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+}
 .login_image-container img
 {
     width: 100%;
@@ -33,30 +43,34 @@
     object-fit: cover;
 }
 
-.login_image-container svg{
+.login_twitlogo_container svg{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    width: 360px;
+    height: 360px;
     z-index: 3;
+    object-fit: cover;
 }
 
 .login_right-container
 {
     width: 46%;
     position: relative;
-    padding: 0 2rem;
-    min-width: calc(580px + 2rem);
+    padding: 0.8rem 2rem;
+    min-width: calc(500px + 4rem);
     flex-shrink: 0;
+    max-height: 1560px;
     /* background-color: antiquewhite; */
 }
 
 .login_right-wrapper
 {  
     
-    height: 95vh;
-    min-height: 500px;
-    width: 580px;
+    height: 100%;
+    width: 100%;
+    max-width: 580px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,7 +82,7 @@
 
 .twitter-logo
 {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
 }
 
 .happening_now_text
@@ -76,7 +90,11 @@
     font-size: 4rem;
     color: rgb(231, 233, 234);
     font-weight: 900;
-    margin-bottom: 2.7rem;
+    margin-bottom: 2.3rem;
+    max-width: fit-content;
+    word-wrap: break-word;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap
 }
 
 .jtt_text
@@ -87,15 +105,152 @@
         margin-bottom: 1.3rem;
 }
 
+.sign_up-actions
+{
+    margin-bottom: 4rem;
+}
+
+.su
+{
+    width: 100%;
+    max-width: 300px;
+    padding: 0rem 1rem;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background-color: #ffffff;
+    color: #0f1419;
+    margin-bottom: 0.6rem;
+    border-radius: 1.5em;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.su:hover
+{
+    filter: brightness(0.85);
+}
+
+.or_seperator
+{
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+}
+
+.or_seperator span:nth-child(1), .or_seperator span:nth-child(3)
+{
+    width: 45%;
+    height: 1.5px;
+    border-radius: 1.5em;
+    display: block;
+    background-color: rgb(47, 51, 54);
+}
+
+.su-phone
+{
+    background-color: rgb(29, 155, 240);
+    color: white;
+}
+
+.tos_text
+{
+    margin-top: -0.2rem;
+    font-size: 0.63rem;
+    max-width: 300px;
+    color: rgb(113, 118, 123);
+}
+
+.tos_text span
+{
+    color: rgb(29, 155, 240);
+}
+
+.sign_in-actions
+{
+    font-weight: 500;
+}
+
+.sign_in-btn
+{
+    margin-top: 1rem;
+    background-color: transparent;
+    color: rgb(29, 155, 240);
+    border:1px solid rgb(83, 100, 113);
+}
+
 .login-footer
 {
-    height: 50px;
+    min-height: 50px;
+    padding: 1.5rem 1rem;
     width: 100%;
     word-spacing: 1.5ch;
     font-size: 0.82rem;
     color: rgb(113, 118, 123);
-    text-align: center;
-    display: grid;
-    place-content: center;
+    text-align: center;    
+}
+
+@media screen and (max-width:1000px)
+{
+    .login-wrapper
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .login_image-container {
+        height: 45vh;
+        min-height: 250px;
+        background-color: antiquewhite;
+    }
+
+    .login_image-container img{
+        object-fit:cover;
+    }
+
+    .login_twitlogo_container {
+            width: 50%;
+            height: 80%;
+    
+        }
+
+                .login_twitlogo_container svg{
+                    width: 100%;
+                    height: 100%;
+        
+                }
+    .login_right-container
+    {
+        min-width: 100%;
+        width: 100%;
+        
+    }
+
+    .login_right-wrapper
+    {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .happening_now_text
+    {
+        font-size: 2.4rem;
+    }
+
+    .jtt_text
+    {
+        font-size: 1.3rem;
+    }
 }
         
