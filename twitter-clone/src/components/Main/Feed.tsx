@@ -2,7 +2,9 @@ import React from 'react'
 
 const Feed:React.FC = () => {
   return (
-    <div>Feed</div>
+    <div>
+        <div>Feed</div>
+    </div>
   )
 }
 
