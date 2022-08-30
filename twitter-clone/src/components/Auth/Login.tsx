@@ -69,7 +69,7 @@ const Login:React.FC = () => {
 
             <div className="sign_in-actions">
               <p>Already have an account?</p>
-              <div className="su sign_in-btn" onClick={() => {navigate("/home")}}>
+              <div className="su sign_in-btn" onClick={() => {navigate("/t/home")}}>
                 Sign in
               </div>
             </div>
