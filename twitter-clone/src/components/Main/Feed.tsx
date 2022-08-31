@@ -5,7 +5,8 @@ import './feed.css'
 
 const Feed:React.FC = () => {
 
-  const textareaRef = useRef<null | HTMLTextAreaElement >(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const diffRef = useRef<string>("")
 
   const handleTextAreaChange = (e:React.ChangeEvent<HTMLTextAreaElement> | any) => {
     console.log(e)
@@ -13,6 +14,66 @@ const Feed:React.FC = () => {
 
     e.target.style.height = "auto"
     e.target.style.height = e.target.scrollHeight.toString() + "px"
+
+    var count = e.target.value.split("").length
+    console.log("count "+count)
+    console.log(e.target.value.split(""))
+
+    handleProgressChange(count)
+  }
+
+  const handleProgressChange = (al:number) => {
+
+    if(canvasRef.current)
+    {
+
+    var ctx = canvasRef.current.getContext('2d');
+    // var al = 70.5;
+    var start = 4.72;
+
+    if(ctx)
+    {
+
+    var cw = ctx.canvas.width;
+    var ch = ctx.canvas.height;  
+    // var diff;
+    
+
+    diffRef.current = ((((al/270) * 100) / 100) * Math.PI*2*10).toFixed(2);
+    ctx.clearRect(0, 0, cw, ch);
+    
+      ctx.lineWidth = 2;
+      ctx.fillStyle = 'white';
+      ctx.strokeStyle = "rgb(29, 155, 240)";
+      ctx.textAlign = 'center';
+      
+      if(al >= 255 && al < 270)
+      {
+        ctx.lineWidth = 2.5;
+        ctx.fillStyle = 'rgb(113, 118, 123)';
+        ctx.strokeStyle = "rgb(255,212,0)";
+        ctx.textAlign = 'center';
+        
+        ctx.fillText((270 - Math.round(al)).toString(), cw*.5, ch*.5+2, cw);
+      }
+      else if(al >= 270)
+      {
+        ctx.lineWidth = 2.5;
+        ctx.fillStyle = 'rgb(113, 118, 123)';
+        ctx.strokeStyle = "rgb(244,33,46)";
+        ctx.textAlign = 'center';
+        
+        ctx.fillText((270 - Math.round(al)).toString(), cw*.5, ch*.5+2, cw);
+      }
+      ctx.beginPath();
+      ctx.arc(12.5, 12.5, 9, start, parseInt(diffRef.current)/10+start, false);
+      ctx.stroke();
+    }
+    
+
+    }
+
+    
   }
 
   return (
@@ -33,7 +94,7 @@ const Feed:React.FC = () => {
                   </div>
 
                   <div className="fc-top-input">
-                    <textarea placeholder="Whats happening ?" rows={1} id="fcti" ref={textareaRef} onChange={(e) => handleTextAreaChange(e)}/>
+                    <textarea placeholder="Whats happening ?" rows={1} id="fcti"  onChange={(e) => handleTextAreaChange(e)}/>
                   </div>
                 </div>
 
@@ -53,7 +114,11 @@ const Feed:React.FC = () => {
                   </div>
 
                   <div className="fcb-right">
-                    Tweet
+                    <div className="canvas-container">
+                      <canvas id="my_canvas" ref={canvasRef} width="25" height="25" style={{borderRadius:"50%"}}></canvas>
+                      <canvas id="my_canvas_fake" width="15" height="15" style={{border:"2.5px solid rgb(47,51,54)",borderRadius:"50%"}}></canvas>
+                    </div>
+                    <div className="fc-tweet">Tweet</div>
                   </div>
                 </div>
               </div>

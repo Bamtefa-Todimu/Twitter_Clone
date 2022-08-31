@@ -128,3 +128,42 @@
     pointer-events: none;
     opacity: 0.5;
 }
+
+.fcb-right
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.canvas-container
+{
+    position: relative;
+    width: 25px;
+    height: 25px;
+}
+
+#my_canvas
+{
+    position: absolute;
+    z-index: 3;
+}
+
+#my_canvas_fake
+{
+    position: absolute;
+    top: 12.2px;
+    left:12.91px;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.fc-tweet
+{
+    background-color: rgb(29, 155, 240);
+    padding: 0.5rem 1.2rem;
+    border-radius: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
