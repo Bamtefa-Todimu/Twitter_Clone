@@ -4,6 +4,7 @@
     max-width: 970px;
     position: relative;
     display: flex;
+    line-height: 1.4;
     /* background-color: red; */
 }
 
@@ -26,6 +27,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.591);
+    backdrop-filter: blur(5px) opacity(0.9);
+    z-index: 10;
 }
 
 .feed-left-header span
@@ -37,7 +41,6 @@
 .feed-body
 {
     width: 100%;
-    padding: 0 1.2rem;
 }
 
 .feed-create-section
@@ -45,6 +48,8 @@
     width: 100%;
     position: relative;
     margin-top: 0.5rem;
+    padding: 0 1.2rem;
+    border-bottom: 1px solid rgb(47, 51, 54);
 }
 
 .fc-top
@@ -166,4 +171,111 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.feed-tweet
+{
+    padding: 1rem;
+    border-bottom: 1px solid rgb(47, 51, 54);
+}
+.fts-header
+{
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    /* align-items: baseline; */
+}
+
+.fts-img
+{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.fts-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ftshr-top
+{
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.ftshr-top span
+{
+    color: #71767B;
+    font-weight: 300;
+}
+
+.fts-body-container
+{
+    position: relative;
+    width: 100%;
+    padding-left: 3.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.fts-body-wrapper
+{
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.media-wrapper
+{
+    width: fit-content;
+    max-width: 100%;
+    height: 510px;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    /* display: flex; */
+    /* justify-content: flex-start; */
+}
+
+.media-wrapper img , .media-wrapper video
+{
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.tweet-video-wrapper
+{
+    width: 100%;
+    height: auto;
+    max-height: 510px;
+}
+.fts-actions{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 3.8rem;
+}
+
+.fts-action
+{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: #71767B;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    width: calc(100%/4);
+}
+
+.fts-action:hover
+{
+    color: rgb(29, 155, 240);
 }
