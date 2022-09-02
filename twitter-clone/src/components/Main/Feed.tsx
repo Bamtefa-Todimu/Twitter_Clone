@@ -157,7 +157,7 @@ const Feed:React.FC = () => {
                   }
                   {
                             (tweet.video)?
-                            <div className="media-wrapper tweet-video-wrapper"><video src={tweet.video}  controls autoPlay></video></div>
+                            <div className="media-wrapper tweet-video-wrapper"><video src={tweet.video}  controls ></video></div>
                             :
                             null
                           }
