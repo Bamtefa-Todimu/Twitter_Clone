@@ -1,6 +1,7 @@
 import React,{useRef}from 'react'
 
 import user from '../../testUser'
+import users from '../../testUsers'
 import tweets from '../../testTweets'
 import './feed.css'
 
@@ -205,9 +206,72 @@ const Feed:React.FC = () => {
             </div>
 
             <div className="feed-right-body">
-              <div className="trends-section"></div>
-              <div className="wtf-section"></div>
-              <div className="tos-section"></div>
+              <div className="trends-section">
+                <div className="ts-title">
+                  Trends for you
+                </div>
+
+                <div className="ts-main">
+                  <div className="trend-card">
+                    <div className="tc-cat"><span>Sports &#x2022; Trending</span> <span className='tc-morespan'><svg viewBox="0 0 24 24" aria-hidden="true" width="18.75px" height="18.75px" fill="currentColor"><g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g></svg></span></div>
+                    <div className="tc-name">Ronaldo</div>
+                    <div className="tc-tweetno">600,436 Tweets</div>
+                  </div>
+                  <div className="trend-card">
+                    <div className="tc-cat"><span>Entertainment &#x2022; Trending</span> <span className='tc-morespan'><svg viewBox="0 0 24 24" aria-hidden="true" width="18.75px" height="18.75px" fill="currentColor"><g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g></svg></span></div>
+                    <div className="tc-name">Bandana</div>
+                    <div className="tc-tweetno">16,937 Tweets</div>
+                  </div>
+                  <div className="trend-card">
+                    <div className="tc-cat"><span>Food &#x2022; Trending</span> <span className='tc-morespan'><svg viewBox="0 0 24 24" aria-hidden="true" width="18.75px" height="18.75px" fill="currentColor"><g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g></svg></span></div>
+                    <div className="tc-name">Eggs</div>
+                    <div className="tc-tweetno">62,036 Tweets</div>
+                  </div>
+                  <div className="trend-card">
+                    <div className="tc-cat"><span>Food &#x2022; Trending</span> <span className='tc-morespan'><svg viewBox="0 0 24 24" aria-hidden="true" width="18.75px" height="18.75px" fill="currentColor"><g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g></svg></span></div>
+                    <div className="tc-name">Yams</div>
+                    <div className="tc-tweetno">1,369 Tweets</div>
+                  </div>
+                  
+                  <div className="trend-card">
+                    <div className="tc-cat"><span>Food &#x2022; Trending</span> <span className='tc-morespan'><svg viewBox="0 0 24 24" aria-hidden="true" width="18.75px" height="18.75px" fill="currentColor"><g><circle cx="5" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle></g></svg></span></div>
+                    <div className="tc-name">Burger King</div>
+                    <div className="tc-tweetno">102,036 Tweets</div>
+                  </div>
+                </div>
+              </div>
+              <div className="wtf-section">
+                <div className="ts-title">
+                  Who to follow
+                </div>
+                <div className="ts-main">
+
+                  {
+                    users.map((user) => {
+                      return(
+                        <div className="wtf-card" key={user.id}>
+                          <div className="wtf-img"><img src={user.imagelink} alt={user.displayname + " image"} /></div>
+                          <div className="wtf-name">
+                            {user.fullname.length > 17 ? user.fullname.slice(0,16)+"..." : user.fullname} <br /> <span style={{color:"#71767B",fontSize:"0.85rem",marginTop:"-1.3rem"}}> {"@"+user.displayname} </span>
+                          </div>
+                          <div className="wtf-follow">Follow</div>
+                        </div>
+                      )
+                    })
+                  }
+                  
+                  
+                </div>
+              </div>
+              <div className="tos-section">
+                Terms of Service &nbsp;
+                Privacy Policy &nbsp;
+                Cookie Policy &nbsp;
+                Accessibility &nbsp;
+                Ads info &nbsp;
+                More... &nbsp; <br />
+                © 2022 Twitter, Inc.
+              </div>
             </div>
           </div>
         </div>
