@@ -279,3 +279,59 @@
 {
     color: rgb(29, 155, 240);
 }
+
+.feed-right-wrapper
+{
+    width: 382px;
+    /* background-color: antiquewhite; */
+    position: relative;
+    padding-left: 2rem;
+    padding-right: 1rem;
+
+}
+
+.feed-right-header
+{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 0.3rem 0;
+    background-color: black;
+}
+
+
+.fr-search
+{
+    width: 100%;
+    background-color: rgb(32,35,39);
+    overflow-x: hidden;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
+    color: rgb(113, 118, 123);
+    border: 1px solid rgb(32,35,39);
+    /* transition: 0.2s ease; */
+}
+
+.fr-search:focus-within
+{
+    border-color: rgb(29, 155, 240);
+    color: rgb(29, 155, 240);
+}
+
+.fr-search-input
+{
+    padding: 12px;
+    width: 100%;
+}
+
+.fr-search-input input
+{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: rgb(231, 233, 234);
+    font-size: 1rem;
+}
