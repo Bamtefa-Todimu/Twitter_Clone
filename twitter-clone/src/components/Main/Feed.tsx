@@ -275,7 +275,7 @@ const Feed:React.FC = () => {
             </div>
           </div>
 
-          <Messages/>
+          {/* <Messages/> */}
         </div>
   )
 }

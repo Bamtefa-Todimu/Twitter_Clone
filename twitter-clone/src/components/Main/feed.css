@@ -403,7 +403,7 @@
 .tc-name
 {
     font-weight: 700;
-    margin-top: -3px;
+    /* margin-top: -3px; */
     margin-bottom: 3px;
 }
 
@@ -446,6 +446,7 @@
     overflow: hidden;
     border-radius: 50%;
     margin-right: 1rem;
+    flex-shrink: 0;
 }
 
 .wtf-img img
@@ -460,8 +461,10 @@
     margin-left: auto;
     padding: 0 1rem;
     height: 32px;
-    background-color: rgb(215, 219, 220);
+    background-color: rgb(239, 243, 244);
     color: black;
+    font-size: 0.95rem;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -550,4 +553,11 @@
 .toggle-mc
 {
     transform: rotate(180deg);
+}
+
+@media screen and (max-width:1060px) {
+    .feed-right-wrapper
+    {
+        display: none;
+    }
 }

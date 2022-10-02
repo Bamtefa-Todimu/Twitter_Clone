@@ -1,0 +1,113 @@
+.explore-container
+{
+    width: 100%;
+    max-width: 988px;
+    position: relative;
+    display: flex;
+    line-height: 1.4;
+}
+
+.explore-wrapper
+{
+    width: 100%;
+    max-width: 588px;
+    position: relative;
+    border-right: 1px solid rgb(47, 51, 54);
+}
+
+.explore-header
+{
+    display: flex;
+    padding: 0.5rem 1rem;
+    padding-left: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.2rem;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.591);
+    backdrop-filter: blur(5px) opacity(0.9);
+    z-index: 10;
+    /* height: 53px; */
+    /* background-color: aqua; */
+}
+
+.explore-search-input
+{
+    padding: 9px;
+    padding-left: 17px;
+}
+
+.explore-search input
+{
+    font-size: 1rem;
+}
+
+.explore-settings
+{
+    cursor: pointer;
+}
+
+.explore-banner
+{
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 0.01rem;
+    border-bottom:1px solid rgb(47, 51, 54);
+}
+
+.explore-banner-img
+{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.explore-banner-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.explore-banner-gradient
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    /* background: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.239)); */
+    background: linear-gradient(rgba(255, 255, 255, 0) 20%,rgba(0, 0, 0, 0.871));
+}
+
+.explore-banner-info
+{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    z-index: 10;
+}
+
+.explore-banner-info p:nth-child(1)
+{
+    font-size: 13px;
+}
+
+.explore-banner-info p:nth-child(2)
+{
+    font-size: 23px;
+    font-weight: 900;
+}
+
+.explore-trends-section
+{
+    background-color: transparent !important;
+}
+
+.explore-wtf-section
+{
+    margin-top: 1rem;
+}
